@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interactive Navigation Menu</title>
+<style>
+
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    transition: background-color 0.3s ease;
+    z-index: 1000; /* Ensure it's above other content */
+  }
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+  }
+  nav ul li a:hover {
+    color: #ffcc00;
+  }
+</style>
+</head>
+<body>
+
+<nav id="navbar">
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- Placeholder content to demonstrate scrolling -->
+<div style="height: 2000px;">
+  Scroll down...
+</div>
+<script>
+window.addEventListener('scroll', function() {
+  var navbar = document.getElementById('navbar');
+  if (window.scrollY > 50) {
+    navbar.style.backgroundColor = '#FF0000'; // Change background color on scroll to red
+  } else {
+    navbar.style.backgroundColor = '#333';
+  }
+});
+
+</script>
+
+
+</body>
+</html>
